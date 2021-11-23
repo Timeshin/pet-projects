@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.conatiner {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-bar {
+    position: absolute;
+    background: #2992DE;
+    top: 50%;
+    height: 3px;
+    width: 0%;
+    z-index: -1;
+    transition: .3s all;
+}
+
+.progress-step {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 350px;
+    z-index: 1;
+}
+
+.progress-step:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    z-index: -1;
+    background: #E2E1E4;
+}
+
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #E2E1E4;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 3px solid #E2E1E4;
+    border-radius: 50%;
+    transition: .3s all;
+}
+
+.buttons {
+    margin-top: 50px;
+}
+
+.buttons button {
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    background: #2992DE;
+}
+
+.buttons button:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.active {
+    border-color: #2992DE;
+}
